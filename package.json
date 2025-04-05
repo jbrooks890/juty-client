@@ -6,25 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next dist node_modules"
   },
   "dependencies": {
+    "@crymson/ui": "*",
+    "@crymson/web": "*",
+    "@crymson/utility": "*",
+    "@crymson/svg": "*",
+    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/postcss": "^4.1.3",
+    "next": "^15",
     "react": "^19",
     "react-dom": "^19",
-    "next": "^15",
-    "@crymson/web": "*",
-    "@crymson/ui": "*",
-    "@svgr/webpack": "^8.1.0"
+    "tailwindcss": "^4.1.3"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10",
-    "postcss": "^8",
-    "tailwindcss": "^3",
     "eslint": "^8",
-    "eslint-config-next": "13.5.6"
+    "eslint-config-next": "13.5.6",
+    "typescript": "~5.6.2",
+    "@crymson/shared-types": "*",
+    "@repo/typescript-config": "*"
   }
 }
