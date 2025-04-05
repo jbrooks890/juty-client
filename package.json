@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.6"
+    "react": "^19",
+    "react-dom": "^19",
+    "next": "^15",
+    "@crymson/web": "*",
+    "@crymson/ui": "*",
+    "@svgr/webpack": "^8.1.0"
   },
   "devDependencies": {
     "typescript": "^5",
