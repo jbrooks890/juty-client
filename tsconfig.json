@@ -19,7 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "$icons/*": ["./public/assets/svg/icons/*"],
+      "$logo/*": ["./public/assets/svg/logo/*"]
     }
   },
   "include": [

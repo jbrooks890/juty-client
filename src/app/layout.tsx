@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SiteConfig from "@crymson/web/SiteConfig";
+import { config } from "../../lib/site.config";
 
 export const metadata: Metadata = {
   title: "Test",
@@ -13,14 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
-  return (
-    <SiteConfig config={{}}>
+    <SiteConfig config={config}>
       <html lang="en">
-        <body>{children}</body>
+        <body className="min-h-screen">{children}</body>
       </html>
     </SiteConfig>
   );

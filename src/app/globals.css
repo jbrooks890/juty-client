@@ -1,1 +1,11 @@
 @import "tailwindcss";
+@source "../../../../packages/ui/";
+@source "../../../../packages/web/";
+
+body {
+  @apply relative flex flex-col;
+}
+
+.test {
+  @apply border border-[red];
+}

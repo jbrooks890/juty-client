@@ -1,4 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  webpack: (config) => {
+    // ::::::::::::::[ SVG EXTENSIONS ]::::::::::::::
+    config.module.rules.push({
+      test: /(?<!\-image)\.svg$/, // LOOK BEHIND NOT SUPPORTED IN ALL BROWSERS
+      use: ["@svgr/webpack"],
+    });
 
-module.exports = nextConfig
+    return config;
+  },
+};
+
+module.exports = nextConfig;
