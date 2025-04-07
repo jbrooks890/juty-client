@@ -3,6 +3,7 @@ import "./globals.css";
 import SiteConfig from "@crymson/web/SiteConfig";
 import { config } from "../../lib/site.config";
 import { Inter, Russo_One, Roboto, Saira } from "next/font/google";
+import PageLayout from "@/components/structure/PageLayout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,7 +47,9 @@ export default function RootLayout({
         lang="en"
         className={`${inter.variable} ${russoOne.variable} ${roboto.variable} ${saira.variable}`}
       >
-        <body className="min-h-screen">{children}</body>
+        <body className="min-h-screen">
+          <PageLayout>{children}</PageLayout>
+        </body>
       </html>
     </SiteConfig>
   );
