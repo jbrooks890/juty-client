@@ -7,16 +7,22 @@ export const config: TSiteConfig = {
   about: "The official website of JuTy Construction & Development",
   owner: "JuTy Construction & Development, LLC",
   favIcon: "./public/favicon.ico",
-  nav: [{ about: ["us", "company"] }, "listings", "gallery", "join", "contact"],
+  nav: [
+    // { "": "Home" },
+    { services: ["construction", "renovation", "management"] },
+    "gallery",
+    { about: ["us", "jobs", "training"] },
+    "contact",
+  ],
   contactInfo: {
     phone: [{ number: 4705560252, type: "mobile" }],
     email: "jutydevelopment@gmail.com",
     address: {
       street: "1234 Alphabet Lane",
-      city: "Big City",
-      state: "State",
+      city: "Atlanta",
+      state: "GA",
       country: "USA",
-      zip: "012345-6789",
+      zip: "30080",
     },
   },
   socials: {
