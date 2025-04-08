@@ -2,18 +2,31 @@ import { TSiteConfig } from "@crymson/web/SiteConfig";
 
 // import Logo from "$logo/juty-logo.svg";
 const $ = "";
+
+const nav = [
+  { services: ["construction", "renovation", "management"] },
+  "gallery",
+  { about: ["company", "jobs", "training"] },
+  "contact",
+];
+
+const siteNav = [
+  ...nav,
+  {
+    legal: {
+      terms: "Terms of Use",
+      privacy: "Privacy Policy",
+      cookies: "Cookie Policy",
+    },
+  },
+];
+
 export const config: TSiteConfig = {
   title: "JuTy",
   about: "The official website of JuTy Construction & Development",
   owner: "JuTy Construction & Development, LLC",
   favIcon: "./public/favicon.ico",
-  nav: [
-    // { "": "Home" },
-    { services: ["construction", "renovation", "management"] },
-    "gallery",
-    { about: ["us", "jobs", "training"] },
-    "contact",
-  ],
+  nav,
   contactInfo: {
     phone: [{ number: 4705560252, type: "mobile" }],
     email: "jutydevelopment@gmail.com",

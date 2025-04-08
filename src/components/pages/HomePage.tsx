@@ -3,11 +3,13 @@ import Page, { usePage } from "@crymson/web/structure/Page";
 import Section from "@crymson/web/structure/Section";
 import List from "@crymson/ui/layout/List";
 import { useEffect } from "react";
+import { useSiteConfig } from "@crymson/web/SiteConfig";
 const { Main } = Page;
 
 type Props = {};
 export default function HomePage({}: Props) {
   const { setStructure } = usePage();
+  const { nav } = useSiteConfig()!;
   useEffect(() => {
     setStructure({ title: "Home" });
   }, []);

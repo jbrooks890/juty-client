@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode } from "react";
-import { useSiteConfig } from "@crymson/web/SiteConfig";
+import SiteConfig, { useSiteConfig } from "@crymson/web/SiteConfig";
 import Footer from "@crymson/web/structure/Footer";
 import Header from "@crymson/web/structure/Header";
 import {
@@ -20,10 +20,12 @@ export default function PageLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const config = useSiteConfig();
   return (
     <Page>
       <Header
         // overlay
+        fish
         className="z-[1000] flex h-16 items-center gap-x-4 bg-black px-8 py-2 text-white"
       >
         <Logo className="mr-auto h-8 fill-current" />
@@ -51,44 +53,20 @@ export default function PageLayout({
             <Address />
           </div>
         </div>
-        <div className="footer-nav grid grid-flow-col grid-rows-4 gap-x-8 justify-self-end text-right *:row-span-full *:grid-rows-subgrid">
-          {Object.entries({
-            Home: "Gallery/Join/Contact".split("/"),
-            Services: "Construction/Renovation/Management".split("/"),
-            About: "Us/Jobs/Training".split("/"),
-            Legal: "Terms of Use/Privacy Policy/Cookie Policy".split("/"),
-          }).map(([title, content]) => {
-            return (
-              <List
-                key={title}
-                title={title}
-                content={content}
-                noMarker
-                titleCss="drop-shadow-[0px_1px_0px_red]"
-              />
-            );
-          })}
-          {/* <List
-            title="Home"
-            content={"Gallery/Join/Contact".split("/")}
-            noMarker
-          />
-          <List
-            title="Services"
-            content={"Construction/Renovation/Management".split("/")}
-            noMarker
-          />
-          <List
-            title="About"
-            content={"Us/Jobs/Training".split("/")}
-            noMarker
-          />
-          <List
-            title="Legal"
-            content={"Terms of Use/Privacy Policy/Cookie Policy".split("/")}
-            noMarker
-          /> */}
-        </div>
+        <Footer.Nav
+          tree={[
+            ...config?.nav,
+            {
+              legal: {
+                terms: "Terms of Use",
+                privacy: "Privacy Policy",
+                cookies: "Cookie Policy",
+              },
+            },
+          ]}
+          className="flex gap-8 justify-self-end text-right"
+          headerCss="drop-shadow-[0px_1px_0px_red]"
+        />
         <Footer.Copy className="border-current/10 col-span-full border-t pt-4 text-center text-xs" />
       </Footer>
     </Page>
