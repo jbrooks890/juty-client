@@ -22,13 +22,13 @@
     "tailwindcss": "^4.1.3"
   },
   "devDependencies": {
+    "@crymson/shared-types": "*",
+    "@repo/typescript-config": "*",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",
-    "typescript": "~5.6.2",
-    "@crymson/shared-types": "*",
-    "@repo/typescript-config": "*"
+    "typescript": "~5.6.2"
   }
 }

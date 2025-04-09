@@ -12,7 +12,7 @@ import {
 import Logo from "$logo/juty-logo.svg";
 import Nav from "@crymson/web/elements/Nav";
 import Button from "@crymson/ui/layout/Button";
-import List from "@crymson/ui/layout/List";
+// import List from "@crymson/ui/layout/List";
 import Page from "@crymson/web/structure/Page";
 
 export default function PageLayout({
@@ -25,7 +25,6 @@ export default function PageLayout({
     <Page>
       <Header
         // overlay
-        fish
         className="z-[1000] flex h-16 items-center gap-x-4 bg-black px-8 py-2 text-white"
       >
         <Logo className="mr-auto h-8 fill-current" />
@@ -65,7 +64,7 @@ export default function PageLayout({
             },
           ]}
           className="flex gap-8 justify-self-end text-right"
-          headerCss="drop-shadow-[0px_1px_0px_red]"
+          // headerCss="drop-shadow-[0px_1px_0px_red]"
         />
         <Footer.Copy className="border-current/10 col-span-full border-t pt-4 text-center text-xs" />
       </Footer>

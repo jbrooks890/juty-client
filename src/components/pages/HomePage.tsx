@@ -22,8 +22,8 @@ export default function HomePage({}: Props) {
         <h2>2056 Gober Ave</h2>
         <List
           bullet="–"
-          content={"Move-In Ready/1200 sqft./3 bed, 2.5 bath/2 Car Garage".split(
-            "/",
+          content={"Move-In Ready/1200 sqft./3 bed, 2 \u00BD bath/2 Car Garage".split(
+            "/"
           )}
         />
       </Section>
