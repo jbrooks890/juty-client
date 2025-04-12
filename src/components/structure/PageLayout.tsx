@@ -40,33 +40,35 @@ export default function PageLayout({
         </Nav>
       </Header>
       {children}
-      <Footer className="grid grid-cols-2 gap-4 gap-x-8 bg-black p-8 text-white">
-        <div className="flex flex-col items-start gap-1">
-          <Logo className="h-12 fill-current" />
-          <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-2 gap-y-1 place-self-start text-sm">
-            {/* <PhoneIcon className="h-4 fill-current aspect-square" /> */}
-            <PhoneNum />
-            <PaperPlaneIcon className="aspect-square h-4 fill-current" />
-            <Email />
-            <LocationIcon className="aspect-square h-4 fill-current" />
-            <Address />
+      <Footer className="bg-black p-8 text-white">
+        <div className="max-w-256 mx-auto grid w-full grid-cols-2 gap-4 gap-x-8">
+          <div className="flex flex-col items-start gap-1">
+            <Logo className="h-12 fill-current" />
+            <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-2 gap-y-1 place-self-start text-sm">
+              {/* <PhoneIcon className="h-4 fill-current aspect-square" /> */}
+              <PhoneNum />
+              <PaperPlaneIcon className="aspect-square h-4 fill-current" />
+              <Email />
+              <LocationIcon className="aspect-square h-4 fill-current" />
+              <Address />
+            </div>
           </div>
-        </div>
-        <Footer.Nav
-          tree={[
-            ...config?.nav,
-            {
-              legal: {
-                terms: "Terms of Use",
-                privacy: "Privacy Policy",
-                cookies: "Cookie Policy",
+          <Footer.Nav
+            tree={[
+              ...config?.nav,
+              {
+                legal: {
+                  terms: "Terms of Use",
+                  privacy: "Privacy Policy",
+                  cookies: "Cookie Policy",
+                },
               },
-            },
-          ]}
-          className="flex gap-8 justify-self-end text-right"
-          // headerCss="drop-shadow-[0px_1px_0px_red]"
-        />
-        <Footer.Copy className="border-current/10 col-span-full border-t pt-4 text-center text-xs" />
+            ]}
+            className="flex gap-8 justify-self-end text-right text-sm"
+            // headerCss="drop-shadow-[0px_1px_0px_red]"
+          />
+          <Footer.Copy className="border-current/10 col-span-full border-t pt-4 text-center text-xs" />
+        </div>
       </Footer>
     </Page>
   );
